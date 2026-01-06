@@ -5,3 +5,15 @@ spring:
     exclude:
       - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
       - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+  datasource:
+    url: jdbc:postgresql://localhost:5432/kioskdb
+    username: kiosk
+    password: kioskpass
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate  # 또는 none (schema.sql 사용하므로)
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true    
